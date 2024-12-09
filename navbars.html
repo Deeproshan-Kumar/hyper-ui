@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/plugins/line-numbers/prism-line-numbers.min.css"
+    />
+    <link rel="stylesheet" href="css/utility.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <title>hyper/ui | Navbars</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <nav>
+          <a href="index.html" class="logo">
+            <h2><ion-icon name="pulse-outline"></ion-icon> hyper/ui</h2>
+          </a>
+          <ul class="menus" id="menus">
+            <li>
+              <a href="docs.html">Docs</a>
+            </li>
+            <li>
+              <a href="usage.html">Usage</a>
+            </li>
+            <li>
+              <a href="components/component.html">Components</a>
+            </li>
+            <li>
+              <a href="#">
+                <ion-icon name="logo-github"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <button id="theme-switch">
+                <ion-icon name="moon-outline"></ion-icon>
+              </button>
+            </li>
+          </ul>
+          <button class="hamburger" id="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </button>
+        </nav>
+      </header>
+      <div class="layout">
+        <aside class="sidebar">
+          <div>
+            <h4>Getting Started</h4>
+            <ul>
+              <li>
+                <a href="introduction.html">Introduction</a>
+              </li>
+              <li>
+                <a href="installation.html">Installation</a>
+              </li>
+            </ul>
+            <br />
+            <h4>Components</h4>
+            <ul>
+              <li>
+                <a href="navbars.html">Navbars</a>
+              </li>
+              <li>
+                <a href="footers.html">Footers</a>
+              </li>
+              <li>
+                <a href="sidebars.html">Sidebars</a>
+              </li>
+              <li>
+                <a href="#">Buttons</a>
+              </li>
+              <li>
+                <a href="">Tabs</a>
+              </li>
+              <li>
+                <a href="">Accordions</a>
+              </li>
+              <li>
+                <a href="">Checkboxes</a>
+              </li>
+              <li>
+                <a href="">Switches</a>
+              </li>
+              <li>
+                <a href="">Radios</a>
+              </li>
+              <li>
+                <a href="">Inputs</a>
+              </li>
+              <li>
+                <a href="">Breadcrumbs</a>
+              </li>
+              <li>
+                <a href="">Forms</a>
+              </li>
+              <li>
+                <a href="">Social Widgets</a>
+              </li>
+              <li>
+                <a href="">Layouts</a>
+              </li>
+              <li>
+                <a href="">Grids</a>
+              </li>
+              <li>
+                <a href="">Shimmers</a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <article>
+          <div class="breadcrumbs">
+            <ul>
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+              <li>
+                <a href="components/component.html">Components</a>
+              </li>
+              <li>Navbars</li>
+            </ul>
+          </div>
+          <iframe
+            src="./components/navbars/navbar-basic.html"
+            width="100%"
+            frameborder="0"
+          ></iframe>
+          <section class="codes" id="codes">
+            <div class="blocks">
+              <div class="block html">
+                <h3>HTML</h3>
+                <pre class="line-numbers"><code class="language-markup">
+&lt;header&gt;
+    &lt;nav&gt;
+        &lt;a href="#" class="logo"&gt;
+            &lt;h2&gt;Logo&lt;/h2&gt;
+        &lt;/a&gt;
+        &lt;ul class="menus" id="menus"&gt;
+            &lt;li&gt;
+            &lt;a href="#"&gt;Home&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+            &lt;a href="#"&gt;About&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+            &lt;a href="#"&gt;Services&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+            &lt;a href="#"&gt;Contact&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;button class="hamburger" id="hamburger"&gt;
+            &lt;span class="line"&gt;&lt;/span&gt;
+            &lt;span class="line"&gt;&lt;/span&gt;
+            &lt;span class="line"&gt;&lt;/span&gt;
+        &lt;/button&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+              </div>
+              <div class="block css">
+                <h3>CSS</h3>
+                <pre class="line-numbers"><code class="language-css">
+@import url("https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  font-family: "Raleway", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --white: #ffffff;
+  --black: #0e0e0e;
+  --background: #000000;
+  --menu-item-clr: #ffffffc5;
+  --border-clr: #ffffff40;
+}
+
+body {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+body.light {
+  --white: #0e0e0e;
+  --black: #ffffff;
+  --background: #ffffff;
+  --menu-item-clr: #000000c5;
+  --border-clr: #00000040;
+}
+
+ul {
+  list-style-type: none;
+}
+
+header {
+  width: 100%;
+  padding-inline: 5rem;
+  background: var(--background);
+  border-bottom: 0.1rem solid var(--border-clr);
+}
+
+nav {
+  min-height: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menus {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 4rem;
+}
+
+.menus li a {
+  text-decoration: none;
+  color: var(--menu-item-clr);
+  transition: 300ms all ease-in-out;
+}
+
+.menus li a:hover {
+  color: var(--white);
+}
+
+nav .logo {
+  text-decoration: none;
+}
+
+nav .logo h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--white);
+}
+
+.hamburger {
+  height: 2.5rem;
+  width: 2.5rem;
+  background: transparent;
+  border: 0;
+  z-index: 1;
+  cursor: pointer;
+  display: none;
+}
+
+.hamburger .line {
+  display: block;
+  width: 2.5rem;
+  height: 0.1rem;
+  margin: 0.4rem 0;
+  border-bottom: 0.3rem solid var(--white);
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition-duration: 300ms;
+}
+
+.hamburger.close .line {
+  margin: 0;
+}
+
+.hamburger.close .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.close .line:nth-child(1) {
+  transform: rotate(45deg) translate(0.2rem, 0.2rem);
+}
+
+.hamburger.close .line:nth-child(3) {
+  transform: rotate(-45deg) translate(0.2rem, -0.2rem);
+}
+
+@media only screen and (max-width: 767px) {
+  header {
+    padding-inline: 2rem;
+  }
+
+  .menus {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    background: var(--background);
+    overflow-y: auto;
+    transform: translateX(-100%);
+    z-index: 1;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-duration: 300ms;
+  }
+
+  .menus.mobile {
+    transform: translateX(0);
+  }
+
+  .hamburger {
+    display: block;
+  }
+}</code></pre>
+              </div>
+              <div class="block js">
+                <h4>JavaScript</h4>
+                <pre class="line-numbers"><code class="language-javascript">
+const menus = document.querySelector("#menus"),
+hamburger = document.querySelector("#hamburger");
+
+hamburger &&
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("close");
+    menus && menus.classList.toggle("mobile");
+});</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer>
+      <div>
+        <p>
+          Developed by <a href="#"><u>Deeproshan Kumar</u></a
+          >. The source code is available on <a href="#"><u>GitHub</u></a
+          >.
+        </p>
+      </div>
+    </footer>
+    <!-- Ionicons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- Prism JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
